@@ -6,15 +6,21 @@ import Home from './componentes/Home';
 import Cadastro from './componentes/Cadastro/Cadastro.js';
 import Noticias from './componentes/Noticias';
 import Projeto from './componentes/Projeto';
+import Footer from './componentes/Footer';
+import EscolaCadastro from './componentes/Cadastro/EscolaCadastro';
+import DoadorCadastro from './componentes/Cadastro/DoadorCadastro';
 
 const App = () => {
   return (
     <Router>
-      <Navbar />
-      <Route path="/" component={Home}/>
-      <Route path="/noticias" component={Noticias}/>
-      <Route path="/cadastro" component={Cadastro}/>
-      <Route path="/sobre" component={Projeto}/>
+      <Navbar/>
+      <Route exact path="/" component={Home}/>
+      <Route exact path="/noticias/" component={Noticias}/>
+      <Route exact path="/cadastro" component={Cadastro}/>
+      <Route exact path="/sobre" component={Projeto}/>
+      <Route exact path="/escola" component={EscolaCadastro} />
+      <Route exact path="/doador" component={DoadorCadastro} />
+      <Footer />
     </Router>
   );
 }
