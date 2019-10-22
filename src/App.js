@@ -9,6 +9,7 @@ import Projeto from './componentes/Projeto';
 import Footer from './componentes/Footer';
 import EscolaCadastro from './componentes/Cadastro/EscolaCadastro';
 import DoadorCadastro from './componentes/Cadastro/DoadorCadastro';
+import Login from './componentes/Cadastro/Login/Login';
 
 const App = () => {
   return (
@@ -20,6 +21,7 @@ const App = () => {
       <Route exact path="/sobre" component={Projeto}/>
       <Route exact path="/escola" component={EscolaCadastro} />
       <Route exact path="/doador" component={DoadorCadastro} />
+      <Route exact path="/login" component={Login} />
       <Footer />
     </Router>
   );
