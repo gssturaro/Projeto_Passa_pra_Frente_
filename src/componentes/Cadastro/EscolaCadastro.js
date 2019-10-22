@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import "./EscolaCadastro.scss";
 import Input from "../Input";
+import { Link } from 'react-router-dom';
 
 
 const EscolaCadastro = () => {
@@ -73,7 +74,7 @@ const EscolaCadastro = () => {
             placeholder="Senha"
             atualizarState={setSenha}
             />   
-            <button>Cadastrar</button>         
+            <Link to="/lista-de-doacoes"><button className="botao">Cadastrar</button></Link>       
         </form>
     </div>
     );

@@ -1,32 +1,33 @@
 .Casa{
     background-image: url(../imagens/Fundo.jpg);
     width: 100%;
-    height:700px;
+    height: 80vh;
     background-size: cover;
     .titulo{
         width: 100%;
-        height: 100px;
-        background-color: red;
+        height: 80px;
+        background-color: #f34331;
         display: flex;
         align-items: center;
         justify-content: space-around;
     }
         h1{
             color: #ffffff;
-            font-family: 'Pacifico', cursive;
+            font-family: 'Oswald', sans-serif;
             font-weight: 500;
         }
         button{
-            width: 70px;
-            height: 70px;
-            border-radius: 100%;
+            font-size: 30pt;
+            width: 210px;
+            height: 210px;
+            background-color: #f34331;
+            padding: 50px;
+            margin: 70px 80px 70px 200px;
             border: none;
-            background: #000000;
-            color: #ffffff;
-            cursor: pointer;
             outline: none;
-            &:hover{
-                background-color: rgba(0, 0, 0, 0.233);
-            }
+            color: white;
+            cursor: pointer;
+            font-weight: 900;
+            font-family: 'Oswald', sans-serif;
         }
-            }
+}

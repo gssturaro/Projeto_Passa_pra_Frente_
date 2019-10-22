@@ -6,9 +6,9 @@ const Home = () => {
         <div className="Casa">
             <header>
                 <div className="titulo">
-                    <h1>Passa pra frente</h1>  
-                    <button>Login</button>  
+                    <h1>PASSA PRA FRENTE</h1>  
                 </div>
+                    <button>Login</button>  
             </header>
         </div>
     );
