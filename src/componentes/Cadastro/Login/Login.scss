@@ -1,0 +1,38 @@
+.Login{ 
+    display: flex;
+    flex-direction: column;
+    margin-left: 50px;
+    margin-top: 30vh;
+    align-items: center;
+    justify-content: center;
+
+    .input{
+        width: 400px;
+        height: 30px;
+        cursor: pointer;
+        padding-right: 50px;
+        margin: 15px;  
+    }
+
+    .button{
+        width: 70px;
+        height: 70px;
+        border-radius: 100%;
+        border: none;
+        background: #000000;
+        color: #ffffff;
+        cursor: pointer;
+        outline: none;
+        &:hover{
+            background-color: rgba(0, 0, 0, 0.233);
+        }
+
+    }
+    .botao{
+        button{
+            margin: 0;
+        }
+
+    }
+}
+

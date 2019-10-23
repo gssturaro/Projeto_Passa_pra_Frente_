@@ -11,6 +11,7 @@ import DoadorCadastro from './componentes/Cadastro/DoadorCadastro';
 import Doacao from './componentes/Doacao';
 import ProdutosDoados from './componentes/ProdutosDoados';
 import ListaProdutos from './componentes/ListaProdutos';
+import Login from './componentes/Cadastro/Login/Login';
 
 const App = () => {
   return (
@@ -24,6 +25,7 @@ const App = () => {
       <Route exact path="/doador" component={DoadorCadastro} />
       <Route exact path="/lista-de-produtos" component={ProdutosDoados} />
       <Route exact path="/lista-de-doacoes" component={ListaProdutos} />
+      <Route exact path="/login" component={Login} />
       <Footer />
     </Router>
   );
