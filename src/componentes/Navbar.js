@@ -18,9 +18,8 @@ const Navbar = () => {
       <nav>
           <div className="ancora">
             <Link to="/">Home</Link>
-            <Link to="/noticias">Notícias</Link>
             <Link to="/cadastro">Cadastre-se</Link>
-            <Link to="/sobre">Sobre o Projeto!</Link>
+            <Link to="/sobre">Sobre o projeto</Link>
           </div>
         <div onClick={abrirMenu} id="menu-hamburguer">
           <span className={`${menuAtivo ? "virarX1": ""}`}></span>
@@ -30,9 +29,8 @@ const Navbar = () => {
       </nav>
       <section className={`menu ${menuAtivo ? "ativo" : ""}`}>
         <Link onClick={fecharMenu} to="/">Home</Link>
-        <Link onClick={fecharMenu} to="/noticias">Notícias</Link>
         <Link onClick={fecharMenu} to="/cadastro">Cadastre-se</Link>
-        <Link onClick={fecharMenu} to="/sobre">Sobre o Projeto!</Link>
+        <Link onClick={fecharMenu} to="/sobre">Sobre o projeto</Link>
       </section>
     </div>
   );

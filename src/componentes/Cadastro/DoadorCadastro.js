@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import "./DoadorCadastro.scss";
 import Input from "../Input";
+import { Link } from 'react-router-dom';
 
 const DoadorCadastro = () => {
     const [nome, setNome] = useState("");
@@ -64,7 +65,7 @@ const DoadorCadastro = () => {
             placeholder="Senha"
             atualizarState={setSenha}
             />  
-            <button className="botao">Cadastrar</button>          
+            <Link to="/doacao"><button className="botao">Cadastrar</button></Link>    
         </form>
     </div>
     );
