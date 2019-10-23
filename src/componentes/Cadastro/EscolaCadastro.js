@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import "./EscolaCadastro.scss";
 import Input from "../Input";
+import { Link } from 'react-router-dom';
 
 const EscolaCadastro = () => {
     const [nome, setNome] = useState ("");
@@ -23,6 +24,7 @@ const EscolaCadastro = () => {
             label="Nome"
             placeholder="Nome completo"
             atualizarState={setNome}
+            obrigatorio
             />                       
             <Input
             value={quantAlunos}
@@ -37,6 +39,7 @@ const EscolaCadastro = () => {
             label="Telefone"
             placeholder="Telefone"
             atualizarState={setTelefone}
+            obrigatorio
             />
         <Input
             value={local}
@@ -44,6 +47,7 @@ const EscolaCadastro = () => {
             label="Local"
             placeholder="Local"
             atualizarState={setLocal}
+            obrigatorio
             />   
         </form>
         </aside>
@@ -56,6 +60,7 @@ const EscolaCadastro = () => {
             label="E-mail"
             placeholder="E-mail"
             atualizarState={setEmail}
+            obrigatorio
             />            
             <Input
             value={confirmEmail}
@@ -63,6 +68,7 @@ const EscolaCadastro = () => {
             label="Confirmação de Email"
             placeholder="Confirmação de E-mail"
             atualizarState={setConfirmEmail}
+            obrigatorio
             />            
             <Input
             value={senha}
@@ -70,9 +76,10 @@ const EscolaCadastro = () => {
             label="Senha"
             placeholder="Senha"
             atualizarState={setSenha}
+            obrigatorio
             />   
             </form>
-        <button>Cadastrar</button>         
+            <Link to="/lista-de-doacoes"><button>Cadastrar</button></Link>
         </section>
             
     </div>
