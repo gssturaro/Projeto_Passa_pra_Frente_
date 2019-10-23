@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import "./DoadorCadastro.scss";
 import Input from "../Input";
-import { Link } from 'react-router-dom';
 
 const DoadorCadastro = () => {
     const [nome, setNome] = useState("");
@@ -14,7 +13,10 @@ const DoadorCadastro = () => {
 
     return (
     <div className="DoadorCadastro">
+        <header>
         <h1>Faça o seu Cadastro!</h1>
+        </header>
+        <aside>
         <form>
             <Input
             value={nome}
@@ -44,6 +46,10 @@ const DoadorCadastro = () => {
             placeholder="CPF"
             atualizarState={setCpf}
             />            
+            </form>
+            </aside>
+            <section>
+            <form>
             <Input
             value={email}
             type="email"
@@ -65,9 +71,11 @@ const DoadorCadastro = () => {
             placeholder="Senha"
             atualizarState={setSenha}
             />  
-            <Link to="/doacao"><button className="botao">Cadastrar</button></Link>    
-        </form>
+            <button>Cadastrar</button>         
+            </form>
+            </section>          
     </div>
     );
 }
+
 export default DoadorCadastro;
