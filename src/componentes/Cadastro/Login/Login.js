@@ -17,6 +17,13 @@ const Login = () => {
     </div>
     );
 
+        
+        <div className="botao">
+            <Link to="/Doacoes" ><button>Login</button></Link>
+        </div>
+    </div>
+    );
+    
 }
 
 export default Login;
