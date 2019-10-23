@@ -11,23 +11,24 @@
         align-items: center;
         justify-content: center;
     }
-        h1{
-            color: #ffffff;
-            font-family: 'Oswald', sans-serif;
-            font-weight: 500;
-        }
-        button{
-            font-size: 30pt;
-            width: 200px;
-            height: 200px;
-            background-color: #161616;
-            padding: 50px;
-            margin: 70px 80px 70px 200px;
-            border: none;
-            outline: none;
-            color: #f34331;
-            cursor: pointer;
-            font-weight: 900;
-            font-family: 'Oswald', sans-serif;
-        }
+    h1{
+        color: #ffffffb4;
+        font-family: 'Oswald', sans-serif;
+        width: 30%;
+        padding: 0;
+    }
+    button{
+        font-size: 30pt;
+        width: 200px;
+        height: 200px;
+        background-color: #161616;
+        padding: 50px;
+        margin: 70px 80px 70px 200px;
+        border: none;
+        outline: none;
+        color: #ffffffb4;
+        cursor: pointer;
+        font-weight: 900;
+        font-family: 'Oswald', sans-serif;
+    }
 }
