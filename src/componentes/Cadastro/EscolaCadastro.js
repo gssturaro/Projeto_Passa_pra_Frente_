@@ -1,12 +1,9 @@
 import React, { useState } from 'react';
 import "./EscolaCadastro.scss";
 import Input from "../Input";
-import { Link } from 'react-router-dom';
-
 
 const EscolaCadastro = () => {
     const [nome, setNome] = useState ("");
-    const [diretor, setDiretor] = useState ("");
     const [quantAlunos, setQuantAlunos] = useState ("");
     const [telefone, setTelefone] = useState ("");
     const [local, setLocal] = useState ("");
@@ -15,7 +12,10 @@ const EscolaCadastro = () => {
     const [senha, setSenha] = useState ("");
     return (
     <div className="EscolaCadastro">
+        <header>
         <h1>Faça o seu Cadastro!</h1>
+        </header>
+        <aside>
         <form>
             <Input
             value={nome}
@@ -23,17 +23,10 @@ const EscolaCadastro = () => {
             label="Nome"
             placeholder="Nome completo"
             atualizarState={setNome}
-            />            
-            <Input
-            value={diretor}
-            type="text"
-            label="Diretor"
-            placeholder="Diretor"
-            atualizarState={setDiretor}
-            />            
+            />                       
             <Input
             value={quantAlunos}
-            type="text"
+            type="number"
             label="Quantidade de Alunos"
             placeholder="Quantidade de alunos"
             atualizarState={setQuantAlunos}
@@ -44,14 +37,18 @@ const EscolaCadastro = () => {
             label="Telefone"
             placeholder="Telefone"
             atualizarState={setTelefone}
-            />          
-            <Input
+            />
+        <Input
             value={local}
             type="text"
             label="Local"
             placeholder="Local"
             atualizarState={setLocal}
             />   
+        </form>
+        </aside>
+        <section>
+        <form>
 
             <Input
             value={email}
@@ -74,9 +71,12 @@ const EscolaCadastro = () => {
             placeholder="Senha"
             atualizarState={setSenha}
             />   
-            <Link to="/lista-de-doacoes"><button className="botao">Cadastrar</button></Link>       
-        </form>
+            </form>
+        <button>Cadastrar</button>         
+        </section>
+            
     </div>
     );
 }
+
 export default EscolaCadastro;

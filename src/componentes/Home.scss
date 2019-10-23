@@ -9,7 +9,7 @@
         background-color: #f34331;
         display: flex;
         align-items: center;
-        justify-content: space-around;
+        justify-content: center;
     }
         h1{
             color: #ffffff;
@@ -17,35 +17,17 @@
             font-weight: 500;
         }
         button{
-
             font-size: 30pt;
-            width: 210px;
-            height: 210px;
-            background-color: #f34331;
+            width: 200px;
+            height: 200px;
+            background-color: #161616;
             padding: 50px;
             margin: 70px 80px 70px 200px;
-
-            width: 70px;
-            height: 70px;
-            border-radius: 100%;
-            text-decoration: none;
-            display: flex;
-            align-items: center;
-            justify-content: center;
             border: none;
             outline: none;
-            color: white;
+            color: #f34331;
             cursor: pointer;
             font-weight: 900;
             font-family: 'Oswald', sans-serif;
         }
 }
-
-            &:hover{
-                background-color: rgba(0, 0, 0, 0.233);
-            }
-        ;
-        }
-    }
-
-

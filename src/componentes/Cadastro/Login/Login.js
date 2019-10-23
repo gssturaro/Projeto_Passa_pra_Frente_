@@ -16,13 +16,6 @@ const Login = () => {
         </div>
     </div>
     );
-
-        
-        <div className="botao">
-            <Link to="/Doacoes" ><button>Login</button></Link>
-        </div>
-    </div>
-    );
     
 }
 
