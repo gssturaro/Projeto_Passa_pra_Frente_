@@ -1,4 +1,4 @@
-.ListaProdutos  {
+.ListaProdutos{
     display: flex;
     justify-content: flex-end;
 }
@@ -16,6 +16,10 @@
         text-decoration: underline;
         cursor: pointer;
         color: red;
+    }
+    img{
+        width: 100px;
+        margin: 20px;
     }
     button{
         color: red;
