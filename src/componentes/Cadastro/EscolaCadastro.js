@@ -11,13 +11,52 @@ const EscolaCadastro = () => {
     const [email, setEmail] = useState ("");
     const [confirmEmail, setConfirmEmail] = useState ("");
     const [senha, setSenha] = useState ("");
+    const [count, setCount] = useState(1);
+    const [mensagem, setMensagem] = useState("");
+    const [status, setStatus] = useState();
+
+    const resposta = texto => {
+        setMensagem(texto);
+        setTimeout(() => {
+          setMensagem("")
+        }, 1500);
+      }
+    
+      const handleSubmit = e => {
+        e.preventDefault();
+    
+        if (email === confirmEmail) {
+          const payload = {
+            name: nome,
+            email: email,
+            confirm_email: confirmEmail,
+            password: senha
+        }
+
+        localStorage.setItem(`Dados${count}`, JSON.stringify(payload));
+        setCount(count + 1);
+        setNome("");
+        setEmail("");
+        setConfirmEmail("");
+        setSenha("");
+        resposta("Cadastrado com sucesso")
+        setStatus(true)
+        window.open("http://localhost:3000/lista-de-produtos")
+  
+      } else {
+        resposta("Os emails não correspondem");
+        setStatus(false);
+      }
+    };
+
     return (
     <div className="EscolaCadastro">
         <header>
         <h1>Faça o seu Cadastro!</h1>
+        <p>{mensagem}</p>
         </header>
         <aside>
-        <form>
+        <form onSubmit={handleSubmit}>
             <Input
             value={nome}
             type="text"
@@ -79,7 +118,7 @@ const EscolaCadastro = () => {
             obrigatorio
             />   
             </form>
-            <Link to="/lista-de-doacoes"><button>Cadastrar</button></Link>
+            <button>Cadastrar</button>
         </section>
             
     </div>

@@ -1,7 +1,7 @@
-import React, { useState } from 'react';
-import "./DoadorCadastro.scss";
+import React, { useState, useEffect } from "react";
 import Input from "../Input";
-import { Link } from 'react-router-dom';
+
+import "./DoadorCadastro.scss";
 
 const DoadorCadastro = () => {
     const [nome, setNome] = useState("");
@@ -11,20 +11,56 @@ const DoadorCadastro = () => {
     const [email, setEmail] = useState ("");
     const [confirmEmail, setConfirmEmail] = useState ("");
     const [senha, setSenha] = useState ("");
+    const [count, setCount] = useState(1);
+    const [mensagem, setMensagem] = useState("");
+    const [status, setStatus] = useState();
 
-    return (
+  const resposta = texto => {
+    setMensagem(texto);
+    setTimeout(() => {
+      setMensagem("")
+    }, 1500);
+  }
+
+  const handleSubmit = e => {
+    e.preventDefault();
+
+    if (email === confirmEmail) {
+      const payload = {
+        name: nome,
+        email: email,
+        confirm_email: confirmEmail,
+        password: senha
+    }
+
+      localStorage.setItem(`Dados${count}`, JSON.stringify(payload));
+      setCount(count + 1);
+      setNome("");
+      setEmail("");
+      setConfirmEmail("");
+      setSenha("");
+      resposta("Cadastrado com sucesso")
+      setStatus(true)
+      window.open("http://localhost:3000/doacao")
+
+    } else {
+      resposta("Os emails não correspondem");
+      setStatus(false);
+    }
+  };
+
+  return (
     <div className="DoadorCadastro">
-        <header>
-        <h1>Faça o seu Cadastro!</h1>
-        </header>
-        <aside>
-        <form>
-            <Input
+      <h1>Faça seu Cadastro!</h1>
+      <p>{mensagem}</p>
+      <form onSubmit={handleSubmit}>
+        <Input
             value={nome}
             type="text"
             label="Nome"
             placeholder="Nome completo"
             atualizarState={setNome}
+            obrigatorio
             />            
             <Input
             value={idade}
@@ -32,6 +68,7 @@ const DoadorCadastro = () => {
             label="Idade"
             placeholder="Idade"
             atualizarState={setIdade}
+            obrigatorio
             />            
             <Input
             value={local}
@@ -39,6 +76,7 @@ const DoadorCadastro = () => {
             label="Local"
             placeholder="Local"
             atualizarState={setLocal}
+            obrigatorio
             />            
             <Input
             value={cpf}
@@ -46,17 +84,15 @@ const DoadorCadastro = () => {
             label="CPF"
             placeholder="CPF"
             atualizarState={setCpf}
-            />            
-            </form>
-            </aside>
-            <section>
-            <form>
+            obrigatorio
+            />
             <Input
             value={email}
             type="email"
             label="E-mail"
             placeholder="E-mail"
             atualizarState={setEmail}
+            obrigatorio
             />            
             <Input
             value={confirmEmail}
@@ -64,6 +100,7 @@ const DoadorCadastro = () => {
             label="Confirmação de Email"
             placeholder="Confirmação de E-mail"
             atualizarState={setConfirmEmail}
+            obrigatorio
             />            
             <Input
             value={senha}
@@ -71,12 +108,12 @@ const DoadorCadastro = () => {
             label="Senha"
             placeholder="Senha"
             atualizarState={setSenha}
-            />  
-            <Link to="/doacao"><button>Cadastrar</button></Link>         
-            </form>
-            </section>          
+            obrigatorio
+            />
+        <button>Cadastrar</button>
+      </form>
     </div>
-    );
-}
+  );
+};
 
 export default DoadorCadastro;
