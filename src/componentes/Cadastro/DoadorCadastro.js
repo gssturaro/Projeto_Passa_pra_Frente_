@@ -51,6 +51,13 @@ const DoadorCadastro = () => {
 
   return (
     <div className="DoadorCadastro">
+        <header>
+        <h1>Faça o seu Cadastro!</h1>
+        </header>
+        <aside>
+        <form>
+            <Input
+           
       <h1>Faça seu Cadastro!</h1>
       <p>{mensagem}</p>
       <form onSubmit={handleSubmit}>
@@ -63,6 +70,7 @@ const DoadorCadastro = () => {
             obrigatorio
             />            
             <Input
+            required=""
             value={idade}
             type="number"
             label="Idade"
@@ -71,6 +79,7 @@ const DoadorCadastro = () => {
             obrigatorio
             />            
             <Input
+            required=""
             value={local}
             type="text"
             label="Local"
@@ -79,6 +88,7 @@ const DoadorCadastro = () => {
             obrigatorio
             />            
             <Input
+            required=""
             value={cpf}
             type="text"
             label="CPF"

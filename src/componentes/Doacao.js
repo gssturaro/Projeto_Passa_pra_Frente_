@@ -9,7 +9,7 @@ const Doacao = () => {
             <form>
                 <aside> 
                     <input placeholder="Nome do item a ser doado"></input>
-                    <input type="text" placeholder="Descrição do item" />
+                    <textarea className="descricao" name="descrição" id="" cols="30" rows="10" placeholder="Descrição do produto"></textarea>
                 </aside>
                 <h4>Imagem do item:</h4>
                 <input type="file" />
