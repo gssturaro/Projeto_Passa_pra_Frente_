@@ -51,11 +51,8 @@ const EscolaCadastro = () => {
 
     return (
     <div className="EscolaCadastro">
-        <header>
         <h1>Faça o seu Cadastro!</h1>
         <p>{mensagem}</p>
-        </header>
-        <aside>
         <form onSubmit={handleSubmit}>
             <Input
             value={nome}
@@ -88,11 +85,6 @@ const EscolaCadastro = () => {
             atualizarState={setLocal}
             obrigatorio
             />   
-        </form>
-        </aside>
-        <section>
-        <form>
-
             <Input
             value={email}
             type="email"
@@ -117,10 +109,8 @@ const EscolaCadastro = () => {
             atualizarState={setSenha}
             obrigatorio
             />   
+            <button>Cadastrar</button>            
             </form>
-            <button>Cadastrar</button>
-        </section>
-            
     </div>
     );
 }
