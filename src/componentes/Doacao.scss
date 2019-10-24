@@ -24,6 +24,20 @@
             font-weight: 600;
             font-size: 13pt;
         }
+        .descricao{
+            border: transparent;
+            width: 60vh;
+            height: 25vh;
+            border-radius: 10px;
+            margin: 0 0 0 100px;
+            color: #161616;
+            &::placeholder {
+                color: #161616;            
+            }
+            font-weight: 600;
+            font-size: 13pt;
+    
+            }
     }
     h1{
         font-size: 30pt;
@@ -49,4 +63,6 @@
         font-size: 13pt;
 
         }
+    
     }
+    

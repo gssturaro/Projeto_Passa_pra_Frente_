@@ -20,6 +20,7 @@ const DoadorCadastro = () => {
         <aside>
         <form>
             <Input
+            required=""
             value={nome}
             type="text"
             label="Nome"
@@ -27,6 +28,7 @@ const DoadorCadastro = () => {
             atualizarState={setNome}
             />            
             <Input
+            required=""
             value={idade}
             type="number"
             label="Idade"
@@ -34,6 +36,7 @@ const DoadorCadastro = () => {
             atualizarState={setIdade}
             />            
             <Input
+            required=""
             value={local}
             type="text"
             label="Local"
@@ -41,6 +44,7 @@ const DoadorCadastro = () => {
             atualizarState={setLocal}
             />            
             <Input
+            required=""
             value={cpf}
             type="text"
             label="CPF"
